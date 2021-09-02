@@ -184,6 +184,9 @@ CMD_GetUnsatCore
 CMD_GetValue
     : 'get-value'
     ;
+CMD_Lemma
+    : 'lemma'
+    ;
 CMD_Pop
     : 'pop'
     ;
@@ -883,6 +886,10 @@ cmd_getValue
     : CMD_GetValue
     ;
 
+cmd_lemma
+    : CMD_Lemma
+    ;
+
 cmd_pop
     : CMD_Pop
     ;
@@ -939,6 +946,7 @@ command
     | ParOpen cmd_getUnsatAssumptions ParClose
     | ParOpen cmd_getUnsatCore ParClose
     | ParOpen cmd_getValue ParOpen term+ ParClose ParClose
+    | ParOpen cmd_lemma symbol term ParClose
     | ParOpen cmd_pop numeral ParClose
     | ParOpen cmd_push numeral ParClose
     | ParOpen cmd_reset ParClose
