@@ -946,7 +946,7 @@ command
     | ParOpen cmd_getUnsatAssumptions ParClose
     | ParOpen cmd_getUnsatCore ParClose
     | ParOpen cmd_getValue ParOpen term+ ParClose ParClose
-    | ParOpen cmd_lemma symbol term ParClose
+    | ParOpen cmd_lemma symbol ParOpen sorted_var* ParClose term ParClose
     | ParOpen cmd_pop numeral ParClose
     | ParOpen cmd_push numeral ParClose
     | ParOpen cmd_reset ParClose
